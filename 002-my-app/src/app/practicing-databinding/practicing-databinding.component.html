@@ -1,0 +1,16 @@
+<h4>INSTRUCTIONS</h4>
+<ol>
+    <li>Add an Input Field wich update the property "username" with the <b>Two-Way-Binding</b></li>
+    <li>Output the "username" property below the Input Field using <b>string interpolation</b></li>
+    <li>Add a <b>button only ENABLED</b> if the "username" is NOT an empty string.</li>
+    <li>Upon <b>clicking the button</b> the "username" should be reset to an empty string </li>
+</ol>
+<h4>RESULTS</h4>
+<input 
+    type="text"
+    class="form-control"
+    [(ngModel)]="username"
+    (input)="controllaUsername()"
+>
+<p>Nome ={{username}}</p>
+<button class="btn btn-primary" [disabled]="stringaVuota" (click)="clearInput()">Clear</button>
