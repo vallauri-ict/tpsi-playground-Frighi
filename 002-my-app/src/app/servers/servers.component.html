@@ -18,8 +18,6 @@
     <p>No server was created!</p>
 </ng-template>
 <hr>
-<app-server></app-server>
-<hr>
-<app-server></app-server>
-<hr>
-<app-server></app-server>
+<app-server *ngFor="let item of servers; let i = index"
+    [ngStyle]="{opacity: i > 1 ? 1 : 0.6}">
+</app-server>
